@@ -55,7 +55,7 @@ profiles:
             enp0s8:
                 dhcp4: false
                 addresses:
-                    - 192.168.22.101/24  
+                    - 192.168.22.101/24
   description: Router LXD profile
   devices:
     enp0s3:
@@ -118,6 +118,8 @@ profiles:
                   routes:
                       - to: default
                         via: 192.168.23.102
+                  nameservers:
+                      addresses: [8.8.8.8,8.8.4.4]
   description: Client LXD profile
   devices:
     enp0s8:
@@ -142,6 +144,8 @@ profiles:
                   routes:
                       - to: default
                         via: 192.168.23.102
+                  nameservers:
+                      addresses: [8.8.8.8,8.8.4.4]
   description: Metasploitable LXD profile
   devices:
     eth1:
